@@ -7,7 +7,8 @@ interface API_RESPONSE {
   contador: number
   frecuencias: Object
 }
-const HOST = process.env.API_HOST || "localhost:4000"
+const HOST = process.env.API_HOST;
+
 const RUTA_POST = `${HOST}/api/v1/normalizar_texto`
 export default function Home() {
   const [texto, setTexto] = useState("")

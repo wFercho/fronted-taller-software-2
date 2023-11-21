@@ -7,8 +7,8 @@ interface API_RESPONSE {
   contador: number
   frecuencias: Object
 }
-
-const RUTA_POST = 'http://localhost:4000/api/v1/normalizar_texto'
+const HOST = process.env.API_HOST || "localhost:4000"
+const RUTA_POST = `${HOST}/api/v1/normalizar_texto`
 export default function Home() {
   const [texto, setTexto] = useState("")
   const [files, setFiles] = useState<FileList | null>(null)
